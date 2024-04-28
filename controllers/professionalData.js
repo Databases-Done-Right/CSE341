@@ -1,4 +1,3 @@
-const { connect } = require('../routes');
 const mongodb = require('./db');
 
 const getData = async (req, res, next) => {
