@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./controllers/db');
 
 app.use(cors());
- 
+
 const port = 8080;
 
 app.use('/', require('./routes'));
