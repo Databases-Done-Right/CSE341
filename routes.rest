@@ -55,7 +55,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT https://cse341-uq0r.onrender.com/contacts/Bqy5ky8e3oQDuEfFfoikkpReQBjvgoeoA3A0PfCq2j95aTYfAK
+PUT https://cse341-uq0r.onrender.com/contacts/ql24FT8JETBzEUq9CSznvEYVXAxsyArG8imhOBVARelqzmBWlk
 content-type: application/json
 
 {
@@ -67,4 +67,4 @@ content-type: application/json
 }
 
 ### Delete a single contact by id
-DELETE https://cse341-uq0r.onrender.com/contacts/Bqy5ky8e3oQDuEfFfoikkpReQBjvgoeoA3A0PfCq2j95aTYfAK
+DELETE https://cse341-uq0r.onrender.com/contacts/2VGAUdsAXdiaKGRFjPH0fae7O9gLLho8efWGsNdXUvkFc0O0D4
