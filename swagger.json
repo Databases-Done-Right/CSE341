@@ -8,7 +8,7 @@
   "host": "cse341-uq0r.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
