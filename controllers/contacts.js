@@ -136,6 +136,34 @@ const updateContact = async (req, res) => {
   }
 
   const id = req.params.id;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  const email = req.body.email;
+  const favoriteColor = req.body.favoriteColor;
+  const birthday = req.body.birthday;
+
+// Validate request
+if (!firstName) {
+  res.status(400).send({ message: 'First name can not be empty!' });
+  return;
+}
+if (!lastName) {
+  res.status(400).send({ message: 'Last name can not be empty!' });
+  return;
+}
+if (!email) {
+  res.status(400).send({ message: 'Email can not be empty!' });
+  return;
+}
+if (!favoriteColor) {
+  res.status(400).send({ message: 'Favorite color can not be empty!' });
+  return;
+}
+if (!birthday) {
+  res.status(400).send({ message: 'Birthday can not be empty!' });
+  return;
+}
+
   Contact.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
     .then((data) => {
       if (!data) {
