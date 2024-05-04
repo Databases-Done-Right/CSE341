@@ -4,8 +4,34 @@
 GET http://localhost:8080/contacts
 
 ### Get a single contact by id
-GET http://localhost:8080/contacts/662dcd0a15c1ba0cf0f799b1
+GET http://localhost:8080/contacts/ql24FT8JETBzEUq9CSznvEYVXAxsyArG8imhOBVARelqzmBWlk
 
+### Create a new contact
+POST http://localhost:8080/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "newFirst",
+  "lastName": "newLast",
+  "email": "new@email.com",
+  "favoriteColor": "newColor",
+  "birthday": "New 1, 2000"
+}
+
+### Update contact
+PUT http://localhost:8080/contacts/Bqy5ky8e3oQDuEfFfoikkpReQBjvgoeoA3A0PfCq2j95aTYfAK
+content-type: application/json
+
+{
+  "firstName": "updatedFirst",
+  "lastName": "newLast",
+  "email": "new@email.com",
+  "favoriteColor": "newColor",
+  "birthday": "New 1, 2000"
+}
+
+### Delete a single contact by id
+DELETE http://localhost:8080/contacts/Bqy5ky8e3oQDuEfFfoikkpReQBjvgoeoA3A0PfCq2j95aTYfAK
 
 
 // Prodiction
@@ -14,4 +40,31 @@ GET http://localhost:8080/contacts/662dcd0a15c1ba0cf0f799b1
 GET https://cse341-uq0r.onrender.com/contacts
 
 ### Get a single contact by id
-GET https://cse341-uq0r.onrender.com/contacts/662dcd0a15c1ba0cf0f799b1
+GET https://cse341-uq0r.onrender.com/contacts/ql24FT8JETBzEUq9CSznvEYVXAxsyArG8imhOBVARelqzmBWlk
+
+### Create a new contact
+POST https://cse341-uq0r.onrender.com/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "newFirst",
+  "lastName": "newLast",
+  "email": "new@email.com",
+  "favoriteColor": "newColor",
+  "birthday": "New 1, 2000"
+}
+
+### Update contact
+PUT https://cse341-uq0r.onrender.com/contacts/Bqy5ky8e3oQDuEfFfoikkpReQBjvgoeoA3A0PfCq2j95aTYfAK
+content-type: application/json
+
+{
+  "firstName": "updatedFirst",
+  "lastName": "newLast",
+  "email": "new@email.com",
+  "favoriteColor": "newColor",
+  "birthday": "New 1, 2000"
+}
+
+### Delete a single contact by id
+DELETE https://cse341-uq0r.onrender.com/contacts/Bqy5ky8e3oQDuEfFfoikkpReQBjvgoeoA3A0PfCq2j95aTYfAK
