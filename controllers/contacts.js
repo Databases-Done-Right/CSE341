@@ -74,7 +74,7 @@ const getAllContacts = async (req, res, next) => {
       email: 1,
       favoriteColor: 1,
       birthday: 1,
-      //_id: 0, // We don't want to see the id in the results
+      // _id: 0 // We don't want to see the id in the results
       _id: 1
     }
   )
@@ -90,6 +90,9 @@ const getAllContacts = async (req, res, next) => {
 };
 
 const getSingleContact = async (req, res, next) => {
+  if (!req.params.id || req.params.id.length != 50) {
+    res.status(400).json('Must use a valid contact id to look up a contact.');
+  }
   const contact_id = req.params.id;
     Contact.find({ _id: contact_id })
       .then((data) => {
@@ -108,6 +111,9 @@ const getSingleContact = async (req, res, next) => {
 
 // Delete a Contact with the specified id in the request
 const deleteContact = async (req, res, next) => {
+  if (!req.params.id || req.params.id.length != 50) {
+    res.status(400).json('Must use a valid contact id to delete a contact.');
+  }
   const id = req.params.id;
   Contact.findByIdAndDelete(id)
     .then((data) => {
